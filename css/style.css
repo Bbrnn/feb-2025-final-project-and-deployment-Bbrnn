@@ -1,0 +1,166 @@
+/* Branding Colors */
+:root {
+  --cbc-primary: #1a73e8;       /* Main brand blue */
+  --cbc-secondary: #FF6B35;     /* Vibrant orange */
+  --cbc-accent: #2EC4B6;        /* Teal for tech */
+  --cbc-highlight: #FFD166;     /* Gold for arts */
+  --cbc-dark: #0A0A0A;          /* Text color */
+  --cbc-light: #F5F5F5;         /* Backgrounds */
+  --cbc-font: 'Poppins', 'Montserrat', Arial, sans-serif;
+}
+
+/*Navbar*/
+/* Add to your style.css */
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:focus {
+  color: var(--cbc-highlight) !important;
+  font-weight: bold;
+  border-bottom: 2px solid var(--cbc-highlight);
+}
+.navbar-nav .nav-link:hover {
+  color: var(--cbc-secondary) !important;
+}
+.navbar-brand {
+  color: var(--cbc-highlight) !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.navbar {
+  box-shadow: 0 2px 8px rgba(26,115,232,0.08);
+}
+
+
+/* Apply to Bootstrap */
+body {
+  font-family: var(--cbc-font);
+  background-color: var(--cbc-light);
+  color: var(--cbc-dark);
+}
+
+.bg-primary { background-color: var(--cbc-primary) !important; }
+.btn-primary { 
+  background-color: var(--cbc-primary);
+  border-color: var(--cbc-primary);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--cbc-secondary);
+  border-color: var(--cbc-secondary);
+  transform: scale(1.05);
+}
+
+/* Card Hover Animation */
+.card {
+  transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Navbar Brand Styling */
+.navbar-brand {
+  color: var(--cbc-highlight) !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Section Headings */
+h2, h3 {
+  color: var(--cbc-primary);
+  font-family: var(--cbc-font);
+}
+
+/* Social Icons Hover */
+footer a.text-white:hover {
+  color: var(--cbc-accent) !important;
+  transition: color 0.2s;
+}
+
+/* Custom program icons by category */
+.card-body .fa-paint-brush { color: var(--cbc-highlight); }
+.card-body .fa-running { color: var(--cbc-secondary); }
+.card-body .fa-music { color: var(--cbc-primary); }
+.card-body .fa-laptop-code { color: var(--cbc-accent); }
+
+/* About Page Styles */
+.about-hero {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: var(--cbc-primary);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-item h4 {
+  position: relative;
+  margin-left: 1.5rem;
+  font-weight: bold;
+  color: var(--cbc-primary);
+}
+
+.timeline-item h4::before {
+  content: "";
+  position: absolute;
+  left: -2.2rem;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--cbc-accent);
+  border: 3px solid var(--cbc-primary);
+}
+
+.timeline-item p {
+  margin-left: 1.5rem;
+  color: var(--cbc-dark);
+}
+
+/* Team Section Enhancements */
+.card-img-top.rounded-circle {
+  border: 4px solid var(--cbc-accent);
+  box-shadow: 0 4px 16px rgba(44, 196, 182, 0.12);
+  transition: transform 0.2s;
+}
+.card-img-top.rounded-circle:hover {
+  transform: scale(1.08);
+  border-color: var(--cbc-highlight);
+}
+
+/* Responsive tweaks for timeline */
+@media (max-width: 767px) {
+  .timeline {
+    padding-left: 1rem;
+  }
+  .timeline-item h4, .timeline-item p {
+    margin-left: 0.5rem;
+  }
+  .timeline::before {
+    left: 0;
+  }
+  .timeline-item h4::before {
+    left: -1.2rem;
+  }
+}
